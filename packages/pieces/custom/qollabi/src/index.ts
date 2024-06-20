@@ -1,20 +1,14 @@
 
 import { createPiece, PieceAuth } from "@activepieces/pieces-framework";
-import { updateReleased } from "./lib/actions/update-released";
-
-export const qollabiAuth = PieceAuth.SecretText({
-  displayName: 'API Key',
-  required: true,
-  description: 'Please use **test-key** as value for API Key',
-});
+import { updateRealised } from "./lib/actions/update-released";
 
 export const qollabi = createPiece({
   displayName: "Qollabi",
-  auth: qollabiAuth,
+  auth: PieceAuth.None(),
   minimumSupportedRelease: '0.20.0',
-  logoUrl: "https://cdn.activepieces.com/pieces/qollabi.png",
+  logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLh9Ap4Y6OjTO8oGomF7WH57jrvFZGf3VKVA&s",
   authors: [],
-  actions: [updateReleased],
+  actions: [updateRealised],
   triggers: [],
 });
 
