@@ -423,6 +423,9 @@
       "@activepieces/piece-qdrant": [
         "packages/pieces/community/qdrant/src/index.ts"
       ],
+      "@activepieces/piece-qollabi": [
+        "packages/pieces/custom/qollabi/src/index.ts"
+      ],
       "@activepieces/piece-queue": [
         "packages/pieces/community/queue/src/index.ts"
       ],
