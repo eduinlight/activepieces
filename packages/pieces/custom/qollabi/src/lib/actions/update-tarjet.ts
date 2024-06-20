@@ -2,11 +2,11 @@ import { createAction, Property, Validators, } from '@activepieces/pieces-framew
 import { HttpMethod, httpClient } from '@activepieces/pieces-common';
 import { getGraphQLUrl } from '../../utils';
 
-export const updateRealised = createAction({
+export const updateTarjet = createAction({
   // auth: check https://www.activepieces.com/docs/developers/piece-reference/authentication,
-  name: 'updateRealised',
-  displayName: 'Update Realised',
-  description: 'Update a milestone realised value',
+  name: 'updateTarjet',
+  displayName: 'Update Tarjet',
+  description: 'Update a milestone tarjet value',
   props: {
     clientName: Property.LongText({
       displayName: 'Client Name',
@@ -98,7 +98,7 @@ export const updateRealised = createAction({
         [props.authHeader]: props.authToken
       },
       body: {
-        query: `mutation smartUpdateContributingObjectiveRealizedMutation(
+        query: `mutation smartUpdateContributingObjectiveTargetMutation(
           $accountFilters: V2AccountListFilterParams!,
           $planId: ID!,
           $objectiveId: ID!,
@@ -106,7 +106,7 @@ export const updateRealised = createAction({
           $end: Date!,
           $value: Float!
         ) {
-          smartUpdateContributingObjectiveRealizedMutation(
+          smartUpdateContributingObjectiveTargetMutation(
             input: {
               accountMatchingFilters: $accountFilters,
               planId: $planId,
